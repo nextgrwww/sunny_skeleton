@@ -1,0 +1,138 @@
+# Documentation for **Real Estate Ads Application**
+
+## Basic Info
+- Name: Premium Spaces
+- Documention Contents:
+    - Login: Login (page)
+    - User Roles
+        - Super Administrator - sudo
+        - Manager - mgmt
+        - Registered User - user
+        - Visitor: - visitor
+    - Functional Requirements
+        - sudo
+            - User Management
+                - Add user: Admin Menu -> Add User (link) -> Add User (page) -> Add User (form) -> Submit (button/link), Cancel (button/link)
+                - View user list: Admin Menu -> User Management -> User Management (page - listing)
+                - View user details:
+                    - Admin Menu -> User Management -> User Management (page - listing) -> Details (button/link)
+                    - Property Post (page) -> Comment (section) -> User Name (link)
+                    - Admin Menu -> Messages (link) -> User Name (link)
+                - Remove user:
+                    - Admin Menu -> User Management -> User Management (page - listing) -> Details (button/link) -> User Details (page) -> Remove User (button/link)
+                    - Property Post (page) -> Comment (section) -> User Name (link) -> User Details (page) -> Remove User (button/link)
+                    - Admin Menu -> Messages (link) -> User Name (link) -> User Details (page) -> Remove User (button/link)
+                - Edit user details:
+                    - Admin Menu -> User Management -> User Management (page - listing) -> Details (button/link) -> User Details (page) -> Edit User (button/link) -> Edit User (Page) -> Submit (button/link)
+                    - Property Post (page) -> Comment (section) -> User Name (link) -> 
+                    - Admin Menu -> Messages (link) -> User Name (link)
+                - Enable/Disable user:
+                    - Admin Menu -> User Management -> User Management (page - listing) -> Details (button/link) -> User Details (page) -> Enable/Disable (toggle button)
+                    - Property Post (page) -> Comment (section) -> User Name (link) ->User Details (page) -> Enable/Disable (toggle button)
+                    - Admin Menu -> Messages (link) -> User Name (link) -> User Details (page) -> Enable/Disable (toggle button)
+                - Activate/Deactivate user:
+                    - Admin Menu -> User Management -> User Management (page - listing) -> Details (button/link) -> User Details (page) -> Activate/Deactivate (toggle button)
+                    - Property Post (page) -> Comment (section) -> User Name (link) ->User Details (page) -> Activate/Deactivate (toggle button)
+                    - Admin Menu -> Messages (link) -> User Name (link) -> User Details (page) -> Activate/Deactivate (toggle button)
+                - Change Password
+                    - Admin Menu -> User Management -> User Management (page - listing) -> Details (button/link) -> User Details (page) -> Change Password (button/link) -> Change Password (modal)
+                    - Property Post (page) -> Comment (section) -> User Name (link) ->User Details (page) -> Change Password (button/link) -> Change Password (modal)
+                    - Admin Menu -> Messages (link) -> User Name (link) -> User Details (page) -> Change Password (button/link) -> Change Password (modal)
+                - Reset user password
+                    - Admin Menu -> User Management -> User Management (page - listing) -> Details (button/link) -> User Details (page) -> Reset Password (button/link) -> Confirm popup
+                    - Property Post (page) -> Comment (section) -> User Name (link) ->User Details (page) -> Reset Password (button/link) -> Confirm popup
+                    - Admin Menu -> Messages (link) -> User Name (link) -> User Details (page) -> Reset Password (button/link) -> Confirm popup
+            - Property Management
+                - Add property post: Admin Menu -> Property Mgmt -> Add Property Post (link) -> Add Property Post (page) -> Submit (button/link), Cancel (button/link)
+                - View property post listings (admin view): Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page)
+                - View property post listing (user view): Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Toggle View (toggle button)
+                - View property post details: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page)
+                - Remove property post: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Post Details (button/link) -> Property Details (page) -> Remove Property (button/link) -> Confirm popup
+                - Edit property post details: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Edit (button/link) -> Edit Property Post (page) -> Save (button/link), Cancel (button/link)
+                - Enable/Disable property post on list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Enable/Disable Property Post (toggle button)
+                - Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Featured On/Off (toggle button)
+                - Add property post to Carousel: Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Carousel Post On/Off (toggle button)
+                - View featured listing on home page: Home (page)
+            - Comments Management
+                - Show/Hide comments section under property posts: Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Comments (section) -> Show/Hide (toggle button)
+                - Add property post comment: Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Comments (section) -> Post Comment (textarea) -> Post (button/link)
+                - View comments under property posts: Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Comments (section)
+                - View comments listing: Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Comments (page) 
+                - Remove comment (own and others): Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Comments (page) -> Expand/Collapse (toggle button) -> Remove Comment (button/link)
+                - Edit comment (own and others): Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Comments (page) -> Expand/Collapse (toggle button) -> Edit Comment (button/link) -> Edit cmment (textarea) -> Save (button/link), Cancel (button/link)
+                - Show/Hide comment (own and others): Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Comments (page) -> Expand/Collapse (toggle button) -> Show/Hide (toggle button)
+            - Statistics
+        - mgmt
+            - User Management
+                - View user list: Admin Menu -> User Management -> User Management (page - listing)
+                - View user details:
+                    - Admin Menu -> User Management -> User Management (page - listing) -> Details (button/link)
+                    - Property Post (page) -> Comment (section) -> User Name (link)
+                    - Admin Menu -> Messages (link) -> User Name (link)
+                - Enable/Disable user:
+                    - Admin Menu -> User Management -> User Management (page - listing) -> Details (button/link) -> User Details (page) -> Enable/Disable (toggle button)
+                    - Property Post (page) -> Comment (section) -> User Name (link) ->User Details (page) -> Enable/Disable (toggle button)
+                    - Admin Menu -> Messages (link) -> User Name (link) -> User Details (page) -> Enable/Disable (toggle button)
+                - Activate/Deactivate user:
+                    - Admin Menu -> User Management -> User Management (page - listing) -> Details (button/link) -> User Details (page) -> Activate/Deactivate (toggle button)
+                    - Property Post (page) -> Comment (section) -> User Name (link) ->User Details (page) -> Activate/Deactivate (toggle button)
+                    - Admin Menu -> Messages (link) -> User Name (link) -> User Details (page) -> Activate/Deactivate (toggle button)
+                - Reset user password
+                    - Admin Menu -> User Management -> User Management (page - listing) -> Details (button/link) -> User Details (page) -> Reset Password (button/link) -> Confirm popup
+                    - Property Post (page) -> Comment (section) -> User Name (link) ->User Details (page) -> Reset Password (button/link) -> Confirm popup
+                    - Admin Menu -> Messages (link) -> User Name (link) -> User Details (page) -> Reset Password (button/link) -> Confirm popup
+            - Property Management
+                - Add property post: Admin Menu -> Property Mgmt -> Add Property Post (link) -> Add Property Post (page) -> Submit (button/link), Cancel (button/link)
+                - View property post listings (admin view): Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page)
+                - View property post listing (user view): Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Toggle View (toggle button)
+                - View property post details: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page)
+                - Remove property post: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Post Details (button/link) -> Property Details (page) -> Remove Property (button/link) -> Confirm popup
+                - Edit property post details: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Edit (button/link) -> Edit Property Post (page) -> Save (button/link), Cancel (button/link)
+                - Enable/Disable property post on list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Enable/Disable Property Post (toggle button)
+                - Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Featured On/Off (toggle button)
+                - Add property post to Carousel: Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Carousel Post On/Off (toggle button)
+                - View featured listing on home page: Home (page)
+            - Comments Management
+                - Show/Hide comments section under property posts: Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Comments (section) -> Show/Hide (toggle button)
+                - Add property post comment: Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Comments (section) -> Post Comment (textarea) -> Post (button/link)
+                - View comments under property posts: Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Properties (page) -> Property Details (button/link) -> Property Details (page) -> Comments (section)
+                - View comments listing: Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Comments (page) 
+                - Show/Hide comment (own and others): Add property post to featured list: Admin Menu -> Property Mgmt -> List Properties (link) -> List Comments (page) -> Expand/Collapse (toggle button) -> Show/Hide (toggle button)
+            - Quote inquiries
+                - View list of quote inquiries for a specific property post: Admin Menu -> Messages (link) -> Select Sort By Properties (radio button)
+                - View list of quote inquiries (arranged by user): Admin Menu -> Messages (link) -> Select Sort By Users (radio button)
+                - Reply to quote or message: Admin Menu -> Messages (link) -> Select Sort By Users (radio button) -> Click Username (pseudo-link) -> Enter text in reply box -> Press Send (button/pseudo-link)
+                - View quote inquiry details: Admin Menu -> Messages (link) -> Select Sort By Users (radio button) -> Click Username (pseudo-link)
+            - Statistics
+        - user
+            - View Featured Property Posts: Home (page)
+            - View Property Posts: User Menu -> Properties (link)
+            - View Property Details: User Menu -> Properties (link) -> Click Property Post or Details (button/link)
+            - Ask for Quote: User Menu -> Properties (link) -> Click Property Post or Details (button/link) -> Ask for Quote (button/link)
+            - Add comments to Property Posts: User Menu -> Properties (link) -> Click Property Post or Details (button/link) -> Write in Comment textarea -> Click Post (button/link)
+            - Delete own comments from Property Posts: User Menu -> Properties (link) -> Click Property Post or Details (button/link) -> Click Delete in front of own comment (button/link)
+            - Edit own comments from Property Posts: User Menu -> Properties (link) -> Click Property Post or Details (button/link) -> Click Edit in front of own comment (button/link) -> Edit comment in textarea -> Click Save (button/link)
+            - View own profile information: User Menu -> Click Username (button/link)
+            - Edit own profile information: User Menu -> Click Username (button/link) -> Click Edit (button/link) -> Edit form (page) -> Click Save (button/link)
+            - View own quote inquiries: User Menu -> Click Messages (button/link)
+        - visitor
+            - Login: Visitor Menu -> Login (button/link) -> Login Form (modal) -> Login (button/link) -> Auto-reload if successful
+            - Register: Visitor Menu -> Register (button/link) -> Register Form (modal) -> Send confirmation code (button-link) -> Fill confirmation code -> Register (button/link) -> Login & Auto-reload if successful
+            - View Featured Property Posts: Home (page)
+    - Page Index with Content Summary
+        - Home page
+        - Registration (modal)
+        - Login (modal)
+        - Password Reset (modal)
+        - Change Password (modal)
+        - Property Post Listing
+        - Property Post Details (with edit functionality)
+        - Add User
+        - User Management
+        - User Details (with edit functionality)
+        - Messages (user view)
+        - Messages (admin view - sorted by users)
+        - Messages (admin view - sorted by property posts)
+    - Page Index with JS & PHP Functions' Pseudo Code
+    - Database Structure
+- 

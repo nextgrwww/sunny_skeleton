@@ -1,0 +1,15 @@
+# Common Functions
+- login.js
+    - get username from input#username[name="username"] and store in username variable 
+    - get password from input#password[name="password"] and store in password variable
+    - get redirect from $redirect and store in redirect variable
+    - use md5() jQuery function to generate password MD5 hash and save in passwordHash variable
+    - create formData object and append username, passwordHash and redirect to formData
+    - send formData to loginScript.php
+        - if loginScript.php returns return_array & return_array['return_type'] then:   
+            - if return_array['return_type'] == 'success' then:
+                - redirect to return_array['return_redirect']
+            - if return_array['return_type'] == 'error' then alert return_array['return_message']
+- loginScript.php
+    - get all variables from $_REQUEST variable and store in variables same as keys of $_REQUEST variable
+    - 
