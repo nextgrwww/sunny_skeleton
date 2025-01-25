@@ -134,5 +134,23 @@
         - Messages (admin view - sorted by users)
         - Messages (admin view - sorted by property posts)
     - Page Index with JS & PHP Functions' Pseudo Code
+        - Javascript function
+            - login(username, passwordHash)
+                - Create variable formData of type FormData()
+                - Create variable variable JSO
+                - Append username as formData.username
+                - Append passwordHash as formData.passwordHash
+                - Create an XHR variable of type XMLHttpRequest object
+                - Do XHR.open() using post method and phpScrips/loginScript.php
+                - On every XHR.onreadystatechange check if XHR.readyState == 4 and XHR.status == 200, if so:
+                    - console.log XHR.responseText
+                    - JSON.parse the XHR.responseText and assign to JSO
+                    - if JSO.return_type = false alert(XHR.return_message)
+                    - if JSO.return_type = success:
+                        - console.log XHR.return_array['session_id']
+                        - store XHR.return_array['session_id'] to localStorage.SS/session_id
+                        - Reload the host page
+                - Send formData using XHR.send(formData)
+
     - Database Structure
 - 
