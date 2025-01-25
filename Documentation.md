@@ -135,29 +135,56 @@
         - Messages (admin view - sorted by property posts)
     - Page Index with JS & PHP Functions' Pseudo Code
         - Javascript function
-            - login(username, passwordHash)
+            - login(username, passwordHash, session_id)
                 - Create variable formData of type FormData()
                 - Create variable variable JSO
                 - Append username as formData.username
                 - Append passwordHash as formData.passwordHash
+                - Check if localStorage.session_id is set. If yes, append it to formData.session_id
                 - Create an XHR variable of type XMLHttpRequest object
                 - Do XHR.open() using post method and phpScrips/loginScript.php
                 - On every XHR.onreadystatechange check if XHR.readyState == 4 and XHR.status == 200, if so:
                     - console.log XHR.responseText
                     - JSON.parse the XHR.responseText and assign to JSO
-                    - if JSO.return_type = false alert(XHR.return_message)
+                    - if JSO.return_type = error:
+                        - alert(XHR.return_message)
+                        - remove localStorage.SS/session_id
                     - if JSO.return_type = success:
                         - console.log XHR.return_array['session_id']
                         - store XHR.return_array['session_id'] to localStorage.SS/session_id
                         - Reload the host page
                 - Send formData using XHR.send(formData)
         - PHP function
-            - login(username, passwordHash)
-                - Create a MySQL query string that checks if SS_users table has a row matching SS_users.username = username and SS_passwordHash = passwordHash 
-                - Run the query using 
-                    - if yes:
-                        - 
-                    - if no:
-                        - 
+            - login(username, passwordHash, session_id)
+                - Import $conn connection variable using global keyword
+                - Create an associative array $return_array
+                - Check if session_id is not null.
+                    - If yes:
+                        - Write a query to check if a row exists in SS_user_sessions with id = $session_id
+                        - Run the query using $conn->query function and store the result in $result variable. 
+                        - If $result->num_rows has more than 0 rows store $session_id in $return_array['session_id']
+                        - else run new_login($username, $passwordHash) function
+                    - If no: run new_login($username, $passwordHash) function
+                - Create function new_user($username, $passwordHash) inside the login() functon that does the following
+                    - Import the $conn variable using global keyword if required
+                    - Create a MySQL query string that checks if SS_users table has a row matching SS_users.username = username and SS_passwordHash = passwordHash 
+                    - Run the query using conn->query() function and store the result in $result variable
+                    - Check if the $result has more than one row using num_rows() function
+                        - if yes:
+                            - Create a query string that inserts a row in table SS_user_sessions with SS_user_sessions.username set to username and SS_user_sessions.login_time set to timestamp and SS_user_sessions_logout_time set to null and SS_user_sessions.id set automatically to autonumber
+                            - Get the SS_user_sessions.id and store in $session_id variable
+                            - Store success in $return_array['return_type'] variable
+                            - Store $user_session in $return_array['session_id'] variable
+                        - if no:
+                            - Store error in $return_array['return_type'] variable
+                            - Store "Invalid username and/or password" in $return_array['return_message'] variable
+                            - Store null in $return_array['session_id'] variable
+                return the $return_array variable
     - Database Structure
+        - SS_users
+        - SS_user_sessions
+            - id
+            - username
+            - login_time
+            - logout_time
 - 
