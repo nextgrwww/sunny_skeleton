@@ -151,6 +151,13 @@
                         - store XHR.return_array['session_id'] to localStorage.SS/session_id
                         - Reload the host page
                 - Send formData using XHR.send(formData)
-
+        - PHP function
+            - login(username, passwordHash)
+                - Create a MySQL query string that checks if SS_users table has a row matching SS_users.username = username and SS_passwordHash = passwordHash 
+                - Run the query using 
+                    - if yes:
+                        - 
+                    - if no:
+                        - 
     - Database Structure
 - 
